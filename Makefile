@@ -9,12 +9,6 @@ rust-version:
 rust-update:
 	@rustup update
 
-rust-sample-build:
-	@rustc main.rs
-
-rust-sample-exec:
-	@rustc main
-
 rust-cargo-version:
 	@cargo --version
 
@@ -33,3 +27,9 @@ rust-format:
 
 rust-test:
 	@cargo test
+
+run-echo-server:
+	@cargo run
+
+run-client:
+	@nc 127.0.0.1 8080

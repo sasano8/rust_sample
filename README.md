@@ -1,3 +1,41 @@
+# セットアップ
+
+このプロジェクトを動作させるには次を手順を実行ください。
+
+```
+python -m venv .venv
+source .venv/bin/activate
+
+# 仮想環境に<my_rust_sample>パッケージをインストールする
+maturin develop
+
+# 疎通確認
+python main.py
+```
+
+
+# 初めからセットアップ
+
+maturin を使用して、rust/pyo3 をセットアップするには次の手順を参考にしてください。
+
+```
+# pyo3のrustプロジェクトを作成し、疎通確認用コードを生成
+maturin new my_rust_sample
+
+# 仮想環境を用意する（maturinで開発する場合に必要）
+python -m venv .venv
+source .venv/bin/activate
+
+# 仮想環境に<my_rust_sample>パッケージをインストールする
+maturin develop
+
+# rustのライブラリをpythonから呼び出す
+python -c "import my_rust_sample; print(my_rust_sample.sum_as_string(1, 2))"
+```
+
+
+
+
 # 概要
 
 rust を覚えるためのプロジェクト。
@@ -19,3 +57,5 @@ rust を覚えるためのプロジェクト。
 ## 言語
 
 - src/lib.rs: ライブラリのエントリポイントとなるようだ？？
+
+

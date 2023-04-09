@@ -1,14 +1,21 @@
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [package]
-name = "rust_sample"
+name = "rust3"
 version = "0.1.0"
 edition = "2021"
-include = [
-    "/src",
-]
+# include = [
+#     "/src",
+#     "/pysrc",
+#     "!__pycache__",
+#     "!tests/.hypothesis",
+#     "!tests/.pytest_cache",
+#     "!*.so",
+# ]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rust3"
+crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = "0.18.2"
+pyo3 = "0.18.1"
 tokio = { version = "1.0", features = ["full"] }
-

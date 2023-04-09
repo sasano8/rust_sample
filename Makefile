@@ -33,3 +33,10 @@ run-echo-server:
 
 run-client:
 	@nc 127.0.0.1 8080
+
+# build-debug:
+# 	@rm -f pysrc/*.so
+# 	@cargo build
+# 	@rm -f target/debug/lib_rust_sample.d
+# 	@rm -f target/debug/lib_rust_sample.rlib
+# 	@mv target/debug/lib_rust_sample.* pysrc/_rust_sample.so

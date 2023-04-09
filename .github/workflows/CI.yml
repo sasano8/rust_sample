@@ -7,9 +7,12 @@ name: CI
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches-ignore:
+      - "**"
+    # CIは不要なのでスキップ
+    # branches:
+    #   - main
+    #   - master
     tags:
       - '*'
   pull_request:

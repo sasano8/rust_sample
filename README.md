@@ -34,6 +34,10 @@ python -c "import my_rust_sample; print(my_rust_sample.sum_as_string(1, 2))"
 ```
 
 
+# 未解決事項
+
+- pyo3でpyiを自動生成することはできない。将来の自動生成に期待。
+
 
 
 # 概要
